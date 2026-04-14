@@ -1,3 +1,0 @@
-This Asset folder is from "FMP-Concepts", dated 13/04/26.
-Packages:
-- ProBuilder
