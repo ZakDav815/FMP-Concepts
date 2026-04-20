@@ -74,12 +74,12 @@
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ShapeBuilder.ActiveShapeIndex",
-                "value": "{\"m_Value\":8}"
+                "value": "{\"m_Value\":6}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cube",
-                "value": "{\"m_Value\":{\"x\":4.069433212280273,\"y\":3.6443333625793459,\"z\":-9.576738357543946}}"
+                "value": "{\"m_Value\":{\"x\":0.0330352783203125,\"y\":3.0564732551574709,\"z\":0.11798095703125}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -89,7 +89,7 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Pipe",
-                "value": "{\"m_Value\":{\"x\":-3.783893585205078,\"y\":2.0191149711608888,\"z\":3.6135950088500978}}"
+                "value": "{\"m_Value\":{\"x\":0.2718353271484375,\"y\":0.17515218257904054,\"z\":0.20516681671142579}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -99,12 +99,12 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cylinder",
-                "value": "{\"m_Value\":{\"x\":10.541574478149414,\"y\":10.3804931640625,\"z\":-10.255409240722657}}"
+                "value": "{\"m_Value\":{\"x\":-0.29642486572265627,\"y\":0.044368863105773929,\"z\":0.3180532455444336}}"
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Sphere",
-                "value": "{\"m_Value\":{\"x\":0.42223262786865237,\"y\":0.34125661849975588,\"z\":0.45506954193115237}}"
+                "value": "{\"m_Value\":{\"x\":-0.024448394775390626,\"y\":0.04525911808013916,\"z\":-0.059502601623535159}}"
             },
             {
                 "type": "UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
