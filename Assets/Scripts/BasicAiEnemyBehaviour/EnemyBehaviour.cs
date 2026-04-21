@@ -1,29 +1,34 @@
 using UnityEngine;
+using System.Collections.Generic; // needed for public list<Transform> Locations;
+using UnityEngine.AI; 
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    // 1
     public Transform PatrolRoute;
-    // 2
     public List<Transform> Locations;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private int _LocationIndex = 0;
+    private NavMeshAgent _Agent;
     void Start()
     {
-        // 3
-        InitializePatrolRoute()
+        _Agent = GetComponent<NavMeshAgent>();
+        InitializePatrolRoute();
+
+        MoveToNextPatrolRoute();
     }
 
-    // 4
-    void InitializePatrolRoute();
+    void InitializePatrolRoute()
     {
-        // 5
         foreach(Transform child in PatrolRoute)
         {
-            // 6
             Locations.Add(child);
         }
     }
-
+    
+    void MoveToNextPatrolLocation()
+    {
+        _Agent.destination = Locations[_LocationIndex].position;
+    }
     void OnTriggerEnter(Collider other)
     {
         // ... No changes needed...
