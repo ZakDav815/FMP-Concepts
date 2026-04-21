@@ -14,7 +14,7 @@ public class EnemyBehaviour : MonoBehaviour
         _Agent = GetComponent<NavMeshAgent>();
         InitializePatrolRoute();
 
-        MoveToNextPatrolRoute();
+        MoveToNextPatrolLocation();
     }
 
     void InitializePatrolRoute()
