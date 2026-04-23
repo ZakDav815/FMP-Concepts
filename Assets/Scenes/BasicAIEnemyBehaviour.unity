@@ -3610,7 +3610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   PatrolRoute: {fileID: 150554484}
-  Locations: []
+  locations: []
 --- !u!195 &148344717
 NavMeshAgent:
   m_ObjectHideFlags: 0
