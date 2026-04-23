@@ -5,13 +5,13 @@ using UnityEngine.AI;
 public class EnemyBehaviour : MonoBehaviour
 {
     public Transform PatrolRoute;
-    public List<Transform> Locations;
+    public List<Transform> locations;
 
-    private int _LocationIndex = 0;
-    private NavMeshAgent _Agent;
+    private int _locationIndex = 0;
+    private NavMeshAgent _agent;
     void Start()
     {
-        _Agent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
         InitializePatrolRoute();
 
         MoveToNextPatrolLocation();
@@ -21,13 +21,23 @@ public class EnemyBehaviour : MonoBehaviour
     {
         foreach(Transform child in PatrolRoute)
         {
-            Locations.Add(child);
+            locations.Add(child);
         }
     }
-    
+    void update()
+    {
+        if(_agent.remainingDistance < 0.2f && !_agent.pathPending)
+        {
+            MoveToNextPatrolLocation();
+        }
+    }
+
     void MoveToNextPatrolLocation()
     {
-        _Agent.destination = Locations[_LocationIndex].position;
+        if (locations.Count == 0)
+        return;
+        _agent.destination = locations[_locationIndex].position;
+        _locationIndex = (_locationIndex + 1) % locations.Count;
     }
     void OnTriggerEnter(Collider other)
     {
