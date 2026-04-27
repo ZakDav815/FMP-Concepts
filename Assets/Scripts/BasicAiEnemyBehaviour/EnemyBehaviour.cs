@@ -4,27 +4,22 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public Transform Player;
     public Transform PatrolRoute;
-    public List<Transform> locations;
-
-    private int _locationIndex = 0;
+    public List<Transform> Locations;
+    private int _LocationIndex = 0;
     private NavMeshAgent _agent;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        Player = GameObject.Find("Player").transform;
+        
         InitializePatrolRoute();
-
         MoveToNextPatrolLocation();
     }
 
-    void InitializePatrolRoute()
-    {
-        foreach(Transform child in PatrolRoute)
-        {
-            locations.Add(child);
-        }
-    }
-    void update()
+    void Update()
     {
         if(_agent.remainingDistance < 0.2f && !_agent.pathPending)
         {
@@ -32,16 +27,29 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    void InitializePatrolRoute()
+    {
+        foreach(Transform child in PatrolRoute)
+        {
+            Locations.Add(child);
+        }
+    }
+
     void MoveToNextPatrolLocation()
     {
-        if (locations.Count == 0)
+        if (Locations.Count == 0)
         return;
-        _agent.destination = locations[_locationIndex].position;
-        _locationIndex = (_locationIndex + 1) % locations.Count;
+        _agent.destination = Locations[_LocationIndex].position;
+        _LocationIndex = (_LocationIndex + 1) % Locations.Count;
     }
+
     void OnTriggerEnter(Collider other)
     {
-        // ... No changes needed...
+        if(other.name == "Player")
+        {
+            _agent.destination = Player.position;
+            Debug.Log("Enemy detected");
+        }
     }
 
     void OnTriggerExit(Collider other)
