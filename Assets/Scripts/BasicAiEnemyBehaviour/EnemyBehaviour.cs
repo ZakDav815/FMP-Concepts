@@ -12,11 +12,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        Player = GameObject.Find("Player").transform;
-        
         InitializePatrolRoute();
         MoveToNextPatrolLocation();
+
+        _agent = GetComponent<NavMeshAgent>();
+        Player = GameObject.Find("Player").transform;
     }
 
     void Update()

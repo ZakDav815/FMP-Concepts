@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
+using Unity.AI;
 
 public class PlayerBehavior : MonoBehaviour
 {
+
     private GameBehavior _gameManager;
     
     void Start()
