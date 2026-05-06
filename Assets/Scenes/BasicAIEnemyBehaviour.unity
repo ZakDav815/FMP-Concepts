@@ -10774,8 +10774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d12e7add27cd409c5eb38a96eba1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
-  Player: {fileID: 0}
-  PatrolRoute: {fileID: 1483960790}
+  Player: {fileID: 816427829}
+  PatrolRoute: {fileID: 150554484}
   Locations: []
 --- !u!43 &589980393
 Mesh:
@@ -13508,6 +13508,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 150554484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &816427829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 837470638741847415, guid: 0d0be5f0a4d53bf4f9511d3caf1bf5d9, type: 3}
+  m_PrefabInstance: {fileID: 1194741412248159117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

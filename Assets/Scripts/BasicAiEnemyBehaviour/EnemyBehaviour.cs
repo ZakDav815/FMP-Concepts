@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic; // needed for public list<Transform> Locations;
-using UnityEngine.AI; 
+using UnityEngine.AI;
+using Unity.ProjectAuditor.Editor;
 
 public class EnemyBehaviour : MonoBehaviour
 {
