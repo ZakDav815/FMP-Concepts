@@ -13,7 +13,7 @@ public class PlayerUI : MonoBehaviour
     public void Get()
     {
         Collectable += 1;
-        _CountText.SetText("Counter: {0}", Collectable);
+        _CountText.SetText("Counter: {0} of 4", Collectable);
         if(Collectable == 4)
         {
             _WinText.SetText("Win");
